@@ -4,4 +4,4 @@
 
 - [dominant_eigenvalue_approximation](https://github.com/sungjoonyoung/Linear_Algebra_something/tree/main/dominant_eigenvalue_approximation)
   - By the power method
-- 
+- [LU-decomposition](https://github.com/sungjoonyoung/Linear_Algebra_something/tree/main/LU-decomposition)
