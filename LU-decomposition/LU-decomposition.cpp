@@ -16,7 +16,7 @@ void mat_cal(void){
     for(int i=0;i<N;i++)L[i][i]=1;
 
     for(int i=0;i<N;i++)for(int j=0;j<N;j++){
-        if(i<j)continue;
+        if(i<j)break;
         if(i==j){
             if(!scala_cal(i)){fail();return;}
         }
