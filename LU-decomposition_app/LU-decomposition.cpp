@@ -27,9 +27,11 @@ void mat_cal(void){
             if(!scala_cal(i)){fail();return;}
         }
         else{
-            // if(U[j][i]==0)continue;
-            if(0)continue;
+            if(U[j][i]==0)continue;
             else minus_cal(j,i);
+
+            // if(0)continue;
+            // else minus_cal(j,i);
         }
     }
 
