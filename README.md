@@ -4,7 +4,8 @@
 
 - [dominant_eigenvalue_approximation](https://github.com/sungjoonyoung/Linear_Algebra_something/tree/main/dominant_eigenvalue_approximation)
   - By the power method
-  - <img src="https://github.com/user-attachments/assets/d0ec517d-669d-49ad-921d-c7c1f672afc2" width="500">
+  - <img src="https://github.com/user-attachments/assets/d0ec517d-669d-49ad-921d-c7c1f672afc2" width="300">
+  - <img src="https://github.com/user-attachments/assets/a3149e97-15f1-4312-91a6-83bd4f30f582" width="300">
 
 
 - [LU-decomposition](https://github.com/sungjoonyoung/Linear_Algebra_something/tree/main/LU-decomposition)
