@@ -1,0 +1,54 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# ====== 데이터 입력 ======
+points = [
+    (0,0,1),
+    (0.507093,0.169031,0.845154),
+    (0.456792,0.433953,0.776547),
+    (0.439371,0.519008,0.733201),
+    (0.432316,0.546288,0.717406),
+    (0.429966,0.554928,0.712168),
+    (0.429206,0.557674,0.71048),
+    (0.428963,0.558547,0.709941),
+    (0.428885,0.558825,0.709769),
+    (0.428861,0.558914,0.709714),
+    (0.428853,0.558942,0.709697),
+    (0.42885,0.558951,0.709691),
+    (0.428849,0.558953,0.70969),
+    (0.428849,0.558954,0.709689),
+    (0.428849,0.558955,0.709689),
+]
+
+# numpy 변환
+pts = np.array(points)
+xs, ys, zs = pts[:,0], pts[:,1], pts[:,2]
+
+# 시간축: 0% ~ 100%
+t = np.linspace(0, 100, len(points))
+
+# ====== 오차 계산 ======
+v_final = pts[-1]  # 마지막 벡터(수렴 벡터)
+errors = np.linalg.norm(pts - v_final, axis=1)
+
+# ====== 그래프 1: 좌표 변화 ======
+plt.figure(figsize=(10,6))
+plt.plot(t, xs, label="x(t)")
+plt.plot(t, ys, label="y(t)")
+plt.plot(t, zs, label="z(t)")
+plt.xlabel("Progress (%)")
+plt.ylabel("Coordinate Value")
+plt.title("Dominant Eigenvector Approximation")
+plt.grid(True)
+plt.legend()
+plt.show()
+
+# ====== 그래프 2: 오차(norm) 변화 ======
+plt.figure(figsize=(10,6))
+plt.plot(t, errors, label="Error norm |v_final - v(t)|")
+plt.xlabel("Progress (%)")
+plt.ylabel("Error Norm")
+plt.title("Convergence Error Over Time")
+plt.grid(True)
+plt.legend()
+plt.show()
