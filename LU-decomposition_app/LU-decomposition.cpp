@@ -17,17 +17,24 @@ void forc_cal(void);
 vector<string> string_pasing(string a);
 void mat_cal(void){
     for(int i=0;i<N;i++)for(int j=0;j<N;j++)U[i][j]=A[i][j];
-    for(int i=0;i<N;i++)L[i][i]=1;
+    for(int i=0;i<N;i++)for(int j=0;j<N;j++)L[i][j]=(i==j)?1:0;
+
+
+
 
     for(int i=0;i<N;i++)for(int j=i;j<N;j++){
         if(i==j){
             if(!scala_cal(i)){fail();return;}
         }
         else{
-            if(U[j][i]==0)continue;
+            // if(U[j][i]==0)continue;
+            if(0)continue;
             else minus_cal(j,i);
         }
     }
+
+
+
     cout<<"L mat : \n";
     for(int i=0;i<N;i++){
         cout<<"|";
@@ -147,6 +154,7 @@ void minus_cal(int x,int y){
 }
 void forc_cal(void){
     for(int i=0;i<N;i++)for(int j=0;j<N;j++){
+        B[i][j]=0;
         for(int k=0;k<N;k++){
             B[i][j]+=L[i][k]*U[k][j];
         }
