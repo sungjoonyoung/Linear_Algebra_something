@@ -22,17 +22,12 @@ void mat_cal(void){
 
 
 
-    for(int i=0;i<N;i++)for(int j=i;j<N;j++){
-        if(i==j){
-            if(!scala_cal(i)){fail();return;}
-        }
-        else{
-            if(U[j][i]==0)continue;
-            else minus_cal(j,i);
+    for(int i=0;i<N;i++)for(int j=i+1;j<N;j++){
+        if(U[j][i]==0)continue;
+        else minus_cal(j,i);
 
-            // if(0)continue;
-            // else minus_cal(j,i);
-        }
+        // if(0)continue;
+        // else minus_cal(j,i);
     }
 
 
@@ -147,7 +142,7 @@ int scala_cal(int x){
     return 1;
 }
 void minus_cal(int x,int y){
-    double tmp=U[x][y];
+    double tmp=U[x][y]/U[y][y];
     for(int i=y;i<N;i++){
         flop++;flop++;
         U[x][i]-=tmp*U[y][i];
