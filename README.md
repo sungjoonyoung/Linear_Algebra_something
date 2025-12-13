@@ -10,3 +10,4 @@
 
 - [LU-decomposition](https://github.com/sungjoonyoung/Linear_Algebra_something/tree/main/LU-decomposition_app)
   - <img width="309" height="65" alt="image" src="https://github.com/user-attachments/assets/2d4d4236-64f6-4fdb-a480-0fa3df00d9e9" />
+  - <img width="303" height="368" alt="image" src="https://github.com/user-attachments/assets/ec0970ec-53c5-45af-a83f-c5046f6582b7" />
